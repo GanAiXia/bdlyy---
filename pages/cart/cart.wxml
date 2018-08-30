@@ -4,23 +4,29 @@
         <view class="cart-items">
             <checkbox-group bindchange="checkboxChange">
                <view class="checkbox-group"  wx:for="{{items}}" wx:for-index="index" >
-               <label class="checkboxl {{item.checked?'is_checked':''}}" >
-                  <checkbox value="{{index}}" checked="{{item.checked}}"/>
-                </label>
-                <view class="checkbox">
-                 <view class="cart-left">
-                    <image src="{{item.image}}"></image>
-                  </view>
-                 <view class="cart-right">
-                      <view class="cart-right-title">{{item.value}}</view>
-                      <view class="cart-right-price">￥{{filters.toFix(item.price)}}</view>
-                      <view class="cart-right-num">
-                      <button bindtap="bindReduceNum" data-index="{{index}}" class="cart-left-button">-</button>
-                      <input type="number" value="{{item.num}}" />
-                      <button bindtap="bindPlusNum" data-index="{{index}}" class="cart-right-button">+</button>
+                <view class="checkbox-font">    
+                    <label class="checkboxl {{item.checked?'is_checked':''}}" >
+                        <checkbox value="{{index}}" checked="{{item.checked}}"/>
+                    </label>
+                    <view class="checkbox">
+                        <view class="cart-left">
+                            <image src="{{item.image}}"></image>
+                        </view>
+                        <view class="cart-right">
+                            <view class="cart-right-title">{{item.value}}</view>
+                            <view class="cart-right-price">￥{{filters.toFix(item.price)}}</view>
+                            <view class="cart-right-num">
+                            <button bindtap="bindReduceNum" data-index="{{index}}" class="cart-left-button">-</button>
+                            <input type="number" value="{{item.num}}" disabled/>
+                            <button bindtap="bindPlusNum" data-index="{{index}}" class="cart-right-button">+</button>
+                            </view>
+                        </view>
                     </view>
                    </view>
+                   <view class="checkbox-behind">
+                       删除
                    </view>
+
                  </view>   
             </checkbox-group> 
         </view>

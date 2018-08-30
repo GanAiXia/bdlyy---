@@ -1,21 +1,23 @@
 .contain {background: #ddd;width: 100%;height: 100vh}
 .contain .contain-items {width: 100%;background: #FFF;}
 .cart-items { width: 94%;height: 100%;margin: 0 auto;}
-.cart-items .checkbox-group {width: 100%;height: 200rpx;display: block;}
+.cart-items .checkbox-group {width: 100%;height: 200rpx;display: block;position: relative;}
 .cart-items .checkbox-group .checkboxl{width: 10%;height:100%;display: block;overflow: hidden;float: left;}
 .cart-items .checkbox-group .checkboxl checkbox{margin-top: 65rpx;}
-.cart-items .checkbox-group .checkbox {width: 90%;height:100%;display: block;overflow: hidden;float: left;}
-.cart-items .checkbox-group .checkbox .cart-left {width: 30%;position: relative;height: 100%;display: block;float: left;overflow: hidden;}
-.cart-items .checkbox-group .checkbox .cart-left checkbox {position: absolute;left: 0;top:50%;margin-top: -27rpx;display: block;}
-.cart-items .checkbox-group .checkbox .cart-left image {height: 160rpx;top:20rpx;width: 100%;position: absolute;left: 0rpx;display: block;}
-.cart-items .checkbox-group .checkbox .cart-right { width: 65%;height: 160rpx;float: right;margin-top: 20rpx;color: #333;overflow:hidden;}
-.cart-items .checkbox-group .checkbox .cart-right .cart-right-title{margin-bottom: 80rpx; font-size: 30rpx}
-.cart-items .checkbox-group .checkbox .cart-right .cart-right-price{float: left;font-size: 24rpx;color: red}
-.cart-items .checkbox-group .checkbox .cart-right .cart-right-num{float: right;font-size: 24rpx;width: 31%;}
-.cart-items .checkbox-group .checkbox .cart-right .cart-right-num button{width: 20%;font-size:20rpx;line-height:40rpx;padding-left: 4rpx;padding-right: 4rpx;width: 40rpx;height: 40rpx;}
-.cart-items .checkbox-group .checkbox .cart-right .cart-right-num .cart-left-button{margin-right:5rpx;float: left;}
-.cart-items .checkbox-group .checkbox .cart-right .cart-right-num .cart-right-button{float: right;}
-.cart-items .checkbox-group .checkbox .cart-right .cart-right-num input{font-size:20rpx;text-align: center; width: 36rpx;height:36rpx;min-height: 36rpx; line-height: 36rpx; float:left;border: 1px solid #ddd;}
+.cart-items .checkbox-group .checkbox-font {width: 100%;height: 100%;z-index: 5;position:absolute;top:0;left:0;background-color:#fff;}
+.cart-items .checkbox-group .checkbox-behind {width: 160rpx;height: 100%;background-color: orangered; position: absolute;top: 0;right: 0; z-index: 4;text-align:center;line-height:200rpx;}
+.cart-items .checkbox-group .checkbox-font .checkbox {width: 90%;height:100%;display: block;overflow: hidden;float: left;}
+.cart-items .checkbox-group .checkbox-font .checkbox .cart-left {width: 30%;position: relative;height: 100%;display: block;float: left;overflow: hidden;}
+.cart-items .checkbox-group .checkbox-font .checkbox .cart-left checkbox {position: absolute;left: 0;top:50%;margin-top: -27rpx;display: block;}
+.cart-items .checkbox-group .checkbox-font .checkbox .cart-left image {height: 160rpx;top:20rpx;width: 100%;position: absolute;left: 0rpx;display: block;}
+.cart-items .checkbox-group .checkbox-font .checkbox .cart-right { width: 65%;height: 160rpx;float: right;margin-top: 20rpx;color: #333;overflow:hidden;}
+.cart-items .checkbox-group .checkbox-font .checkbox .cart-right .cart-right-title{margin-bottom: 80rpx; font-size: 30rpx}
+.cart-items .checkbox-group .checkbox-font .checkbox .cart-right .cart-right-price{float: left;font-size: 24rpx;color: red}
+.cart-items .checkbox-group .checkbox-font .checkbox .cart-right .cart-right-num{float: right;font-size: 24rpx;width: 31%;}
+.cart-items .checkbox-group .checkbox-font .checkbox .cart-right .cart-right-num button{width: 20%;font-size:20rpx;line-height:40rpx;padding-left: 4rpx;padding-right: 4rpx;width: 40rpx;height: 40rpx;}
+.cart-items .checkbox-group .checkbox-font .checkbox .cart-right .cart-right-num .cart-left-button{margin-right:5rpx;float: left;}
+.cart-items .checkbox-group .checkbox-font .checkbox .cart-right .cart-right-num .cart-right-button{float: right;}
+.cart-items .checkbox-group .checkbox-font .checkbox .cart-right .cart-right-num input{font-size:20rpx;text-align: center; width: 36rpx;height:36rpx;min-height: 36rpx; line-height: 36rpx; float:left;border: 1px solid #ddd;}
 .contain .contain-bottom {width: 100%;height: 100rpx;display: block;background: #fff;position: fixed;bottom: 0;}
 .contain .contain-bottom .contain-bottom-con{width: 94%;height: 100%;margin: 0 auto;}
 .contain .bottom-item {height: 100%;float: left;line-height: 100rpx;text-align: center;}

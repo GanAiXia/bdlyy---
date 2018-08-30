@@ -1,0 +1,75 @@
+<view class="contain">
+    <view class="top">
+        <view class="top-top">
+            <view class="top-portrait">
+                  <view class="userinfo">
+                    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+                    <block wx:else>
+                    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+                    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+                    </block>
+                  </view>
+            </view>
+            <view class="top-grade">
+                <image  class="userinfo-grade" src="../../skin/images/grade.jpg"></image>
+                    <text>普通用户 ></text>
+            </view>
+        </view>
+        <view class="top-bottom">
+            <view class="top-integral">
+                <text>0\n积分</text>
+            </view>
+            <view class="top-balance">
+                <text>￥0\n余额</text>
+            </view>
+        </view>
+    </view>
+
+    <view class="center">
+         <view class="center-top">
+            <text class="center-order">全部订单</text>
+            <text class="center-orders">查看全部订单 ></text>
+        </view>
+        <view class="center-bottom">
+            <view class="center-item">
+                <image src="../../skin/images/payment.png"/>
+               <text >
+               待支付
+               </text>
+            </view>
+            <view class="center-item">
+                <image src="../../skin/images/delivery.png"/>
+               <text >
+                   待发货
+                   </text>
+            </view>
+            <view class="center-item">
+                <image src="../../skin/images/received.png"/>
+               <text >
+                   待收货
+                   </text>
+            </view>
+            <view class="center-item">
+                <image src="../../skin/images/assess.png"/>
+                <text >
+                    待评价
+                    </text>
+            </view>
+        </view>
+    </view>
+
+    <view class="bottom">
+         <view class="bottom-top">
+         <navigator url="/pages/cart/cart" open-type = "switchTab">
+            <image src="../../skin/images/cart.png" class="bottom-top-limg"/>
+            <text class="bottom-order">我的购物车</text>
+            <image src="../../skin/images/arrow.png" class="bottom-top-rimg"/>
+         </navigator>
+        </view>
+        <view class="bottom-bottom">
+                <image src="../../skin/images/addr.png" class="bottom-top-limg"/>
+                <text class="bottom-order">地址管理</text>
+                <image src="../../skin/images/arrow.png" class="bottom-top-rimg"/>
+        </view>
+    </view>
+</view>

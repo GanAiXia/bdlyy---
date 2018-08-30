@@ -1,0 +1,86 @@
+<!--index.wxml-->
+<view class="container">
+
+  <view class="page-banner">
+    <view class="swiper">
+    <swiper indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image"/>
+        </swiper-item>
+      </block>
+    </swiper>
+    </view>
+  </view>
+
+  <view class="page-recommend">
+    <view class="items-bottom">
+        <view class="items-div">
+           <view class="items-img">
+               <image src="/skin/images/doctors.png" class="slide-image"/>
+           </view>
+           <view class="items-content">
+             <span class="items-content-title">医生团队</span>
+           </view>
+        </view>
+        <view class="items-div">
+              <view class="items-img">
+                  <image src="/skin/images/album.png" class="slide-image"/>
+              </view>
+              <view class="items-content">
+                <span class="items-content-title">日记相册</span>
+              </view>
+          </view>
+          <view class="items-div">
+                <view class="items-img">
+                    <image src="/skin/images/appointment.png" class="slide-image"/>
+                </view>
+                <view class="items-content">
+                  <span class="items-content-title">预约挂号</span>
+                </view>
+          </view>
+    </view>
+ </view>
+
+  <view class="page-recommend">
+     <view class="recommend-top">
+        <span><p class="recommend-top-line"> </p>  精品推荐  <p class="recommend-top-line">  </p></span>
+     </view>
+     <view class="recommend-bottom">
+        <swiper
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" displayMultipleItems="{{displayMultipleItems}}" class="recommend-bottom-con">
+        <block wx:for="{{recommend}}" wx:for-index="idx" wx:for-item="itemName">
+          <swiper-item class="recommend-banner" item-width="33.3%">
+            <view class="recommend-img">
+                <image src="{{itemName.url}}" class="slide-image"/>
+            </view>
+            <view class="recommend-content">
+              <span class="recommend-content-title">{{itemName.title}}</span>
+              <span class="recommend-content-price">{{itemName.price}}</span>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+      </view>
+  </view>
+
+  <view class="page-hotrec">
+    <view class="hotrec-top">
+       <span><p class="hotrec-top-line"> </p>  热门推荐  <p class="hotrec-top-line">  </p></span>
+    </view>
+    <view class="hotrec-bottom">
+       <block wx:for="{{hotrec}}" wx:for-index="idx" wx:for-item="itemName">
+         <view class="hotrec-banner">
+           <view class="hotrec-img">
+               <image src="{{itemName.url}}" class="slide-image"/>
+           </view>
+           <view class="hotrec-content">
+             <span class="hotrec-content-title">{{itemName.title}}</span>
+             <span class="hotrec-content-price">{{itemName.price}}</span>
+           </view>
+         </view>
+       </block>
+     </view>
+ </view>
+</view>

@@ -1,0 +1,150 @@
+/**index.wxss**/
+.container {
+  padding:0;
+  background-color: #ddd;
+}
+.page-banner {
+  width: 100%;
+}
+.swiper,swiper {
+  height: 350rpx;
+}
+.slide-image{
+  width: 100%;
+  height: 350rpx;
+}
+.page-recommend .items-bottom{
+  width: 94%;
+  margin: 0 auto;
+  padding-top: 20rpx;
+  }
+.page-recommend .items-div{
+display: inline-block;
+width: 31%;
+margin-right: 3.5%;
+text-align: center;
+font-size: 32rpx;
+color: #222;
+}
+.page-recommend .items-div image{
+  height: 100rpx;
+  width: 100rpx;
+  }
+.page-recommend .items-div:last-child{
+  margin-right: 0;
+}
+.page-recommend .items-div .items-content{
+  margin-bottom: 20rpx;
+}
+
+.page-recommend {
+  margin-top: 20rpx;
+  background-color: #fff;
+  width: 100%;
+  display: block;
+}
+.recommend-top{
+ text-align: center;
+ font-size: 32rpx;
+ padding-top: 20rpx;
+}
+.recommend-top span{
+  line-height: 32rpx;
+  color: #444;
+}
+.recommend-top span .recommend-top-line{
+  border-bottom: 2px solid red;
+  width: 40rpx;
+  display: inline-block;
+  margin-bottom:10rpx;
+}
+.recommend-bottom {
+  margin-top: 20rpx;
+}
+.recommend-bottom .recommend-bottom-con{
+  height: 310rpx;
+}
+.recommend-bottom .recommend-bottom-con {
+  width: 94%;
+  margin: 0 auto;
+  margin-left: 4%;
+  overflow: hidden;
+}
+.recommend-bottom .recommend-img {
+  width: 92%;
+  height: 200rpx;
+}
+.recommend-bottom .recommend-img image{
+  border-radius: 6rpx;
+}
+
+.recommend-bottom .slide-image {
+  height: 200rpx;
+}
+.recommend-bottom .recommend-content{
+  padding-top: 14rpx;
+}
+.recommend-bottom .recommend-content-title{
+  font-size: 24rpx;
+  display: block;
+  color: #333;
+  line-height: 36rpx;
+}
+.recommend-bottom .recommend-content-price{
+  font-size: 28rpx;
+  display: block;
+  color: red;
+}
+
+.page-hotrec{
+  width: 100%;
+  background: #fff;
+  margin-top: 20rpx;
+}
+.page-hotrec .hotrec-top {
+  text-align: center;
+  font-size: 32rpx;
+  padding-top: 20rpx;
+}
+.page-hotrec .hotrec-top span{
+  line-height: 32rpx;
+  color: #444;
+}
+.page-hotrec .hotrec-top .hotrec-top-line{
+  border-bottom: 2px solid red;
+  width: 40rpx;
+  display: inline-block;
+  margin-bottom:10rpx;
+}
+.page-hotrec .hotrec-bottom {
+  width: 92%;
+  margin: 0 auto;
+  padding-top: 20rpx;
+}
+.page-hotrec .hotrec-bottom .hotrec-banner{
+  width: 48%;
+  display: inline-block;
+  padding-bottom: 30rpx;
+}
+.page-hotrec .hotrec-bottom .hotrec-banner .hotrec-img image{
+  border-radius: 10rpx;
+}
+.page-hotrec .hotrec-bottom .hotrec-banner .slide-image{
+  height: 300rpx;
+}
+.page-hotrec .hotrec-bottom .hotrec-banner:nth-child(2n+1){
+  margin-right: 4%;
+}
+.hotrec-bottom .hotrec-content-title{
+  padding-left: 5rpx;
+  font-size: 24rpx;
+  display: block;
+  color: #333;
+  line-height: 36rpx;
+}
+.hotrec-bottom .hotrec-content-price{
+  padding-left: 5rpx;
+  font-size: 28rpx;
+  display: block;
+  color: red;
+}

@@ -1,0 +1,39 @@
+<view class="contain">
+    <wxs module="filters" src="../cart/cart.wxs"></wxs>
+    <view class="contain-items">
+        <view class="cart-items">
+            <checkbox-group bindchange="checkboxChange">
+               <view class="checkbox-group"  wx:for="{{items}}" wx:for-index="index" >
+               <label class="checkboxl {{item.checked?'is_checked':''}}" >
+                  <checkbox value="{{index}}" checked="{{item.checked}}"/>
+                </label>
+                <view class="checkbox">
+                 <view class="cart-left">
+                    <image src="{{item.image}}"></image>
+                  </view>
+                 <view class="cart-right">
+                      <view class="cart-right-title">{{item.value}}</view>
+                      <view class="cart-right-price">￥{{filters.toFix(item.price)}}</view>
+                      <view class="cart-right-num">
+                      <button bindtap="bindReduceNum" data-index="{{index}}" class="cart-left-button">-</button>
+                      <input type="number" value="{{item.num}}" />
+                      <button bindtap="bindPlusNum" data-index="{{index}}" class="cart-right-button">+</button>
+                    </view>
+                   </view>
+                   </view>
+                 </view>   
+            </checkbox-group> 
+        </view>
+    </view>
+    <view class="contain-bottom">
+        <view class="contain-bottom-con">
+        <view class="bottom-item bottom-item1" bind:tap="changAll">
+            <icon wx:if="{{isChecked}}" type="success_circle" size="30" />
+            <icon wx:else type="circle" size="30" />
+            <text>全选</text>
+        </view>
+        <view class="bottom-item bottom-item2"><view class="bottom-item bottom-total">合计：</view><view class="bottom-item bottom-price">￥{{filters.toFix(totalmoney)}}</view></view>
+        <view class="bottom-item bottom-item3">结算({{totalnum}})</view>
+        </view>
+    </view>
+</view>

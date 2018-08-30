@@ -1,0 +1,40 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/list/list",
+    "pages/cart/cart",
+    "pages/home/home"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#0164a7",
+    "navigationBarTitleText": "上海百达丽医疗美容门诊部",
+    "navigationBarTextStyle":"light"
+  },
+  "tabBar":{
+    "list": [
+      {
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "/skin/images/home.png",
+      "selectedIconPath": "/skin/images/home_c.png"
+      }, {
+      "pagePath": "pages/list/list",
+      "text": "全部商品",
+      "iconPath": "/skin/images/goods.png",
+      "selectedIconPath": "/skin/images/goods_c.png"
+    },{
+      "pagePath": "pages/cart/cart",
+      "text": "购物车",
+      "iconPath": "/skin/images/cart.png",
+      "selectedIconPath": "/skin/images/cart_c.png"
+      }, {
+      "pagePath": "pages/home/home",
+      "text": "个人中心",
+      "iconPath": "/skin/images/person.png",
+      "selectedIconPath": "/skin/images/person_c.png"
+    }
+  ]
+  }
+}

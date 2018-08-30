@@ -1,0 +1,30 @@
+.contain{width: 100%;height: 100vh;display: block;background-color: #ddd;}
+.contain .top{width: 100%;height: 300rpx;background-color: #fff;margin: 0 auto;}
+.contain .top .top-top{width: 94%; height: 50%;display: block;margin: 0 auto;border-bottom: 1px solid #ddd;}
+.contain .top .top-portrait{width: 50%; height: 100%;display: block;float: left;}
+.contain .top .top-grade{width: 50%; height: 50%;float:right;}
+.contain .top .top-portrait .userinfo{width: 100%;height: 100%;display: block;}
+.contain .top .top-portrait .userinfo image {width: 100rpx;height: 100rpx;border-radius: 100rpx;margin-top: 25rpx;float: left;}
+.contain .top .top-portrait .userinfo .userinfo-nickname{display: block;margin-left: 25rpx;padding-top: 50rpx;float: left;color: #333}
+.contain .top .top-portrait .userinfo .button-hover {margin-top: 25rpx;}
+.contain .top .top-grade {font-size: 26rpx;padding-top: 60rpx;text-align: right;}
+.contain .top .top-grade .userinfo-grade {width: 30rpx;height: 30rpx;padding-right: 15rpx;}
+.contain .top .top-bottom {width:94%;height:50%;display:block;margin:0 auto;text-align: center;font-size: 28rpx;color: #333;}
+.contain .top .top-bottom .top-integral{width:49%;height:50%;display:block;margin:0 auto;float: left;margin-top: 32rpx;border-right: 1px solid #ddd;}
+.contain .top .top-bottom .top-balance{width:49%;height:50%;display:block;margin:0 auto;float: right;margin-top: 32rpx;}
+
+.contain .center{width: 100%;height: 260rpx;background-color: #fff;margin: 0 auto;margin-top: 20rpx;}
+.contain .center .center-top{width: 94%; height: 30%;display: block;font-size: 30rpx; margin: 0 auto;border-bottom: 1px solid #ddd;}
+.contain .center .center-top .center-order{float: left;margin-top: 18rpx;color: #333;}
+.contain .center .center-top .center-orders{float: right;margin-top: 18rpx;color: #888;}
+.contain .center .center-bottom {width: 100%;height: 70%;display: block;}
+.contain .center .center-bottom .center-item{width: 25%;height: 100%;display: block;float: left;text-align: center;font-size: 26rpx;color: #888;}
+.contain .center .center-bottom .center-item image{width: 60rpx;height: 60rpx;padding-top:30rpx;}
+
+.contain .bottom{width: 100%;height: 160rpx;background-color: #fff;margin: 0 auto;margin-top: 20rpx;}
+.contain .bottom .bottom-top{width: 94%; height: 50%;display: block;font-size: 30rpx;color: #333; margin: 0 auto;border-bottom: 1px solid #ddd;}
+.contain .bottom image{width: 50rpx;height: 50rpx;padding-top:15rpx;}
+.contain .bottom .bottom-top-limg{padding-right: 10rpx;float: left;}
+.contain .bottom .bottom-top-rimg{float: right;}
+.contain .bottom .bottom-bottom {width:94%;height:50%;display:block;margin:0 auto;font-size: 30rpx;color: #333;}
+.contain .bottom .bottom-order{padding-top: 25rpx;display: block;float: left;}

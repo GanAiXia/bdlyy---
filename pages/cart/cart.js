@@ -1,12 +1,14 @@
 Page({
     data: {
         items: [
-          {name: 'USA', image: "../../skin/images/1.jpg", value: '项目标题一',price: 9999.00,num:1,checked: false},
-          {name: 'CHN', image: "../../skin/images/2.jpg", value: '项目标题二',price: 8888.00,num:1,checked: true}
+          {name: 'USA', image: "../../skin/images/1.jpg", value: '项目标题一',price: 9999.00,num:1,checked: false,left:0},
+          {name: 'CHN', image: "../../skin/images/2.jpg", value: '项目标题二',price: 8888.00,num:1,checked: true,left:0}
         ],
         totalmoney: 0.00,
         totalnum: 0,
-        isChecked: true
+        isChecked: true,
+        delBtnWidth:180,
+        startX: 0,
       },
       onLoad: function () {
         let totalmoney = this.data.totalmoney
@@ -127,6 +129,7 @@ Page({
         let isChecked = this.data.isChecked
         let totalmoney = this.data.totalmoney
         let totalnum = this.data.totalnum
+
         for (let item = 0; item < items.length; item++) {
           let itemcheck = "items[" + item + "].checked"
             this.setData({
@@ -151,6 +154,71 @@ Page({
             })
           }
         }
+      },
+      deleteItem: function (e) {
+        let itemIndex = parseInt(e.currentTarget.dataset.index)
+        let dataItems = this.data.items
+        let totalmoney = this.data.totalmoney
+        let totalnum = this.data.totalnum
+        let isChecked =this.data.isChecked
+        // dataItems = dataItems.splice(itemIndex,1)        
+        dataItems.splice(itemIndex,1)
+        this.setData({
+          items: dataItems
+        })
+        if (dataItems.length == 0) {
+          this.setData({
+            'totalmoney': 0,
+            'totalnum'  : 0
+          })
+        }else{
+          totalmoney = 0
+          totalnum = 0
+          for (let item = 0; item < dataItems.length; item++) {
+            if (dataItems[item].checked == true) {
+              totalmoney += dataItems[item].num * dataItems[item].price
+              totalnum += dataItems[item].num
+            }
+            if (dataItems[item].checked == false) {
+              isChecked = false
+            }
+          }
+          
+          this.setData({
+            'totalmoney' : totalmoney,
+            'totalnum' : totalnum,
+            'isChecked': isChecked
+          })
+        }
+      },
+      touchS: function(e) {
+        if (e.touches.length == 1) {
+          this.setData({
+            startX:e.touches[0].clientX
+          });
+        }
+  
+      },
+      touchM: function(e) {
+
+      },
+      touchE: function(e) {
+
+          let endX = e.changedTouches[0].clientX
+          let startX = this.data.startX
+          let disX = startX - endX
+          let delBtnWidth = this.data.delBtnWidth/3
+          let itemIndex = e.currentTarget.dataset.index
+          let itemleft = "items[" + itemIndex + "].left"
+          if (disX > delBtnWidth) {
+            this.setData({
+              [itemleft]: '-180rpx'
+            })
+          }else{
+            this.setData({
+              [itemleft]: '0rpx'
+            })
+          }
+
       }
-      
 })

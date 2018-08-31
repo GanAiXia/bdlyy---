@@ -4,7 +4,7 @@
         <view class="cart-items">
             <checkbox-group bindchange="checkboxChange">
                <view class="checkbox-group"  wx:for="{{items}}" wx:for-index="index" >
-                <view class="checkbox-font">    
+                <view class="checkbox-font" style="left:{{item.left}}" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index="{{index}}">    
                     <label class="checkboxl {{item.checked?'is_checked':''}}" >
                         <checkbox value="{{index}}" checked="{{item.checked}}"/>
                     </label>
@@ -23,7 +23,7 @@
                         </view>
                     </view>
                    </view>
-                   <view class="checkbox-behind">
+                   <view class="checkbox-behind" bind:tap="deleteItem" data-index="{{index}}">
                        删除
                    </view>
 

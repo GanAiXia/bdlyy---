@@ -26,5 +26,5 @@
 .contain .bottom image{width: 50rpx;height: 50rpx;padding-top:15rpx;}
 .contain .bottom .bottom-top-limg{padding-right: 10rpx;float: left;}
 .contain .bottom .bottom-top-rimg{float: right;}
-.contain .bottom .bottom-bottom {width:94%;height:50%;display:block;margin:0 auto;font-size: 30rpx;color: #333;}
+.contain .bottom .bottom-bottom {width:94%;height:50%;display:block;margin:0 auto;font-size: 30rpx;color: #333;line-height:35rpx;}
 .contain .bottom .bottom-order{padding-top: 25rpx;display: block;float: left;}

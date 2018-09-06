@@ -5,7 +5,9 @@
     "pages/list/list",
     "pages/cart/cart",
     "pages/home/home",
-    "pages/goods/goods"
+    "pages/goods/goods",
+    "pages/addr/addr",
+    "pages/newaddr/newaddr"
   ],
   "window":{
     "backgroundTextStyle":"light",

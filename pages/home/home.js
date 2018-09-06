@@ -40,5 +40,10 @@ Page({
           userInfo: e.detail.userInfo,
           hasUserInfo: true
         })
+      },
+      toAddr: function () {
+        wx.navigateTo({
+          url: '/pages/addr/addr'
+        })
       }
 })

@@ -1,0 +1,4 @@
+.contain {background: #ddd;width: 100%;height: 100vh}
+.contain .newaddrtop{width: 100%;height: 20rpx;}
+.contain .newaddr{width: 100%;background-color: #fff;font-size: 26rpx; }
+.contain .newaddr .newson{width: 94%;height: 70rpx;margin: 0 auto;border-bottom: 1px solid #ddd; line-height: 70rpx}

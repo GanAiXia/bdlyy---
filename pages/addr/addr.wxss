@@ -1,0 +1,14 @@
+.contain {background: #ddd;width: 100%;height: 100vh}
+.contain .bottom-addr{width: 100%;height: 100rpx;margin-top: 30rpx; background-color: #fff;position: fixed;bottom: 0;left: 0;border-top: 1px solid #ddd;font-size: 26rpx;}
+.contain .bottom-addr .bottom-addrnew{width: 40%;height: 70rpx;margin: 0 auto; border: 1px solid red;text-align: center;line-height: 70rpx; background-color: red;margin-top: 14rpx; color: #fff;font-size: 30rpx; border-radius: 10rpx;}
+.contain .top-addr{width: 100%;background-color: #fff;font-size:30rpx;height: 156rpx;padding-top: 20rpx;padding-bottom: 100rpx;color: #313131;margin-bottom: 30rpx;}
+.contain .top-addr .top-top{width: 94%;height: 60rpx;background-color: #fff;margin: 0 auto;}
+.contain .top-addr .top-top .top-topl{width: 50%;height: 100%;float: left;}
+.contain .top-addr .top-top .top-topr{width: 50%;height: 100%;float: right;text-align: right;}
+.contain .top-addr .top-center{width: 94%;background-color: #fff;margin: 0 auto;padding-bottom: 30rpx;}
+.contain .top-addr .top-bottom{width: 94%;height: 60rpx;background-color: #fff;margin: 0 auto;padding-top: 20rpx;overflow: hidden;border-top: 1px solid #ddd;}
+.contain .top-addr .top-bottom .top-bottoma{width: 40%;float: left;}
+.contain .top-addr .top-bottom .top-bottome{width: 40%;float: right;}
+.contain .top-addr .top-bottom .top-bottome image{width: 40rpx;height: 40rpx; float: right;}
+.contain .top-addr .top-bottom .top-bottome .top-bottomedit{width:40%;float: left;}
+.contain .top-addr .top-bottom .top-bottome .top-bottomedel{width:40%;float: right;}

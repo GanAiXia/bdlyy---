@@ -1,0 +1,9 @@
+<view class="contain">
+    <view class="newaddrtop"></view>
+     <view class="newaddr">
+         <view class="newson newname">姓名 <input type="text" /> </view>
+         <view class="newson newhone">电话 <input type="number" /></view>
+         <view class="newson newaddr">地址 </view>
+         <view class="newdetail"></view>
+     </view>
+</view>

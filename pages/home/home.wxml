@@ -66,10 +66,10 @@
             <image src="../../skin/images/arrow.png" class="bottom-top-rimg"/>
          </navigator>
         </view>
-        <view class="bottom-bottom">
+        <view class="bottom-bottom" bind:tap="toAddr">
                 <image src="../../skin/images/addr.png" class="bottom-top-limg"/>
-                <text class="bottom-order">地址管理</text>
-                <image src="../../skin/images/arrow.png" class="bottom-top-rimg"/>
+                <text class="bottom-order" >地址管理</text>
+                <image src="../../skin/images/arrow.png" class="bottom-top-rimg" />
         </view>
     </view>
 </view>

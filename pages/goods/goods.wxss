@@ -1,0 +1,38 @@
+.content{width: 100%;height: 100vh; background-color: #ddd;}
+.top-banner{width: 100%;height:692rpx;display: block;}
+.top-banner swiper{width: 100%;height: 100%;}
+.top-banner image{width: 100%;height: 100%;}
+.top-name{width: 100%;background-color: #fff;height: 120rpx;line-height:35rpx;border-bottom: 1px solid #ddd}
+.top-name .top-nametext{font-size: 32rpx}
+.top-price{width: 100%;background-color: #fff;height: 80rpx;font-size: 26rpx;color: #939393;line-height:70rpx;}
+.top-price .top-priceleft{color: red;float: left;padding-left: 20rpx;}
+.top-price .top-priceleft .top-money {font-size: 34rpx;}
+.top-price .top-priceright{float: right;padding-right: 20rpx;}
+.bottom-count{ width: 100%;height: 70rpx;background-color: #fff;margin-top: 24rpx;font-size: 30rpx;line-height: 64rpx;color: #939393;}
+.bottom-count .bottom-countleft{float: left;margin-left: 20rpx;}
+.bottom-count .bottom-countright{width: 40rpx;height: 100%; float: right;margin-right: 20rpx;}
+.bottom-count .section{width: 100%;height: 100%;}
+.bottom-count .section picker {width: 100%;height: 100%;}
+.bottom-shop{ width: 100%;height: 90rpx;background-color: #fff;position: relative;margin-top: 24rpx;font-size: 30rpx;color: #939393;}
+.bottom-shop image{width: 50rpx;height: 60rpx;left: 20rpx;top: 14rpx;position: absolute;}
+.bottom-shop text{left: 90rpx;position: absolute;top: 25rpx;}
+.bottom-detail{ width: 100%;min-height: 200rpx;background-color: #fff;position: relative;margin-top: 24rpx;font-size: 30rpx;color: #939393;padding-bottom: 100rpx;}
+.bottom-detail .bottom-top{width: 100%;height: 70rpx;position: relative;}
+.bottom-detail .bottom-top .bottom-top-parameter{width: 49%;height: 70rpx;line-height: 70rpx;text-align: center;position: absolute;top: 0;left: 0;}
+.bottom-detail .bottom-top .bottom-top-parahover{color: #333;border-bottom: 1px solid red}
+.bottom-detail .bottom-top .bottom-top-assess{width: 49%;height: 70rpx;line-height: 70rpx;text-align: center;position: absolute;top: 0;left: 50%;}
+.bottom-detail .bottom-top .bottom-top-asshover{color: #333;border-bottom: 1px solid red}
+.bottom-detail .bottom-top .bottom-top-center{width: 1px;height: 35rpx;border-left: 1px solid #333;position: absolute;left: 49%;top:17rpx}
+.bottom-detail .bottom-bottom-parameter{width: 100%;position: absolute;left: 0;top: 80rpx;display: none;}
+.bottom-detail .paradis{display: block;}
+.bottom-detail .bottom-bottom-assess{width: 100%;position: absolute;left: 0;top: 80rpx;display: none;}
+.bottom-detail .assdis{display: block;}
+.bottom-cart{width: 100%;height: 100rpx;background-color: #fff;position: fixed;bottom: 0;left: 0;border-top: 1px solid #ddd}
+.bottom-cart .bottom-ico{width: 70rpx;height: 70rpx;float: left;margin-top: 30rpx;margin-left: 20rpx;position: relative;}
+.bottom-cart .bottom-ico image{width: 50rpx;height: 50rpx;}
+.bottom-cart .bottom-ico .navigator-hover{background-color: rgba(0, 0, 0, 0);}
+.bottom-cart .bottom-ico text{position: absolute;display: block;width: 44rpx;height: 34rpx; font-size:26rpx;right: 0;top: -16rpx;background: red;color: #fff;border-radius: 17rpx;text-align: center;}
+.bottom-cart .bottom-edit{width: 70%;height: 100rpx;float: right;margin-right: 20rpx;}
+.bottom-cart .bottom-edit .bottom-addcart{width: 48%;height: 70rpx;border: 1px solid red;text-align: center;line-height: 70rpx; color: red;float: left;margin-top: 14rpx; font-size: 30rpx;}
+.bottom-cart .bottom-edit .bottom-buynow{width: 48%;height: 70rpx;border: 1px solid red;text-align: center;line-height: 70rpx; background-color: red;margin-top: 14rpx; color: #fff;float: right;font-size: 30rpx;}
+

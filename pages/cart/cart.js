@@ -1,9 +1,6 @@
 Page({
     data: {
-        items: [
-          {name: 'USA', image: "../../skin/images/1.jpg", value: '项目标题一',price: 9999.00,num:1,checked: false,left:0},
-          {name: 'CHN', image: "../../skin/images/2.jpg", value: '项目标题二',price: 8888.00,num:1,checked: true,left:0}
-        ],
+        items: [],
         totalmoney: 0.00,
         totalnum: 0,
         isChecked: true,
@@ -11,6 +8,13 @@ Page({
         startX: 0,
       },
       onLoad: function () {
+        var that = this
+        let nowitems = wx.getStorageSync("newgoods")
+        console.log(nowitems)
+        that.setData({
+          'items': nowitems
+        })
+        console.log(this.data.items)
         let totalmoney = this.data.totalmoney
         let totalnum = this.data.totalnum
         let items = this.data.items
@@ -29,6 +33,37 @@ Page({
           'totalnum' : totalnum,
           'isChecked': isChecked
         })
+        wx.setStorageSync("totalnum",totalnum)
+      },
+      onShow: function () {
+        var that = this
+        let nowitems = wx.getStorageSync("newgoods")
+        console.log(nowitems)
+        that.setData({
+          'items': nowitems
+        })
+        console.log(this.data.items)
+        let totalmoney = this.data.totalmoney
+        totalmoney = 0.00
+        let totalnum = this.data.totalnum
+        totalnum = 0
+        let items = this.data.items
+        let isChecked = this.isChecked
+        for (let item = 0; item < items.length; item++) {
+          if (items[item].checked == true) {
+            totalmoney += items[item].num * items[item].price
+            totalnum += items[item].num
+          }
+          if (items[item].checked == false) {
+            isChecked = false
+          }
+        }
+        this.setData({
+          'totalmoney' : totalmoney,
+          'totalnum' : totalnum,
+          'isChecked': isChecked
+        })
+        wx.setStorageSync("totalnum",totalnum)
       },
       bindPlusNum: function(e) {
         let ref = e.currentTarget.dataset.index
@@ -52,6 +87,9 @@ Page({
            'totalmoney' : totalmoney,
            'totalnum' : totalnum
          })
+         let nowitems = this.data.items
+         wx.setStorageSync("newgoods",nowitems)
+         wx.setStorageSync("totalnum",totalnum)
       },
       bindReduceNum: function(e) {
         
@@ -79,6 +117,9 @@ Page({
           'totalmoney' : totalmoney,
           'totalnum' : totalnum
         })
+        let nowitems = this.data.items
+        wx.setStorageSync("newgoods",nowitems)
+        wx.setStorageSync("totalnum",totalnum)
       },
       checkboxChange: function(e) {
         // console.log('checkbox发生change事件，携带value值为：', e.detail.value)
@@ -123,6 +164,8 @@ Page({
           'totalmoney' : totalmoney,
           'totalnum' : totalnum
         })
+        wx.setStorageSync("newgoods",items)
+        wx.setStorageSync("totalnum",totalnum)
       },
       changAll: function(e){
         let items = this.data.items
@@ -154,6 +197,8 @@ Page({
             })
           }
         }
+        wx.setStorageSync("newgoods",items)
+        wx.setStorageSync("totalnum",totalnum)
       },
       deleteItem: function (e) {
         let itemIndex = parseInt(e.currentTarget.dataset.index)
@@ -190,6 +235,8 @@ Page({
             'isChecked': isChecked
           })
         }
+        wx.setStorageSync("newgoods",dataItems)
+        wx.setStorageSync("totalnum",totalnum)
       },
       touchS: function(e) {
         if (e.touches.length == 1) {

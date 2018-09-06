@@ -73,14 +73,14 @@ page{
   /*浮动向左*/  
   float: left;  
   /*每个item设置宽度是33.33%*/  
-  width: 33.33%;  
-  height: 120px;  
+  width: 50%;  
+  height: 280rpx;  
   text-align: center;  
 }  
 .nav_right .nav_right_items image{  
   /*被图片设置宽高*/  
-  width: 60px;  
-  height: 60px;  
+  width: 220rpx;  
+  height: 160rpx;  
   margin-top: 15px;  
 }  
 .nav_right .nav_right_items text{  

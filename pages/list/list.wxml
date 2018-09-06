@@ -1,5 +1,5 @@
 <view class="container">
-  <view class="page-recommend">
+  <!-- <view class="page-recommend">
       <import src="/wxSearch/wxSearch.wxml"/>
       <view class="wxSearch-section">
           <view class="wxSearch-pancel">
@@ -8,7 +8,7 @@
           </view>
       </view>
       <template is="wxSearch" data="{{wxSearchData}}"/>
-  </view>
+  </view> -->
   <view class="page-nav">
      <!--左侧栏-->
      <view class="nav_left">
@@ -25,7 +25,7 @@
           <block wx:for="{{cateItems[curIndex].children}}">
             <view class="nav_right_items">
             <!--界面跳转 -->
-              <navigator url="../../detail/detail}}">
+              <navigator url="/pages/goods/goods">
                 <image src="{{item.image}}"></image>
                 <text>{{item.name}}</text>
               </navigator>

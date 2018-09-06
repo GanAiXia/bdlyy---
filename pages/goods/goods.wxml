@@ -1,0 +1,80 @@
+<view class="content">
+<view class="top-banner">
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+</view>
+
+<view class="top-name">
+<text class="top-nametext">
+    {{name}}
+</text>
+</view>
+<view class="top-price">
+<view class="top-priceleft">
+    ￥<text class="top-money">{{price}}</text>
+</view>
+<view class="top-priceright">
+    销量: <text class="top-volume">{{volume}}</text>
+</view>
+</view>
+
+<view class="bottom-count">
+
+<view class="section">
+  <view class="bottom-countleft">数量: {{array[index]}}</view>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="bottom-countright">
+        >
+    </view>
+  </picker>
+</view>
+</view>
+
+<view class="bottom-shop">
+    <image src="/skin/images/logo.png" />
+    <text > {{shop}}</text>
+</view>
+
+<view class="bottom-detail">
+    <view class="bottom-top">
+        <view class="bottom-top-parameter {{parahover}}" bind:tap="parahover">
+            详情
+        </view>
+        <view class="bottom-top-center"></view>
+        <view class="bottom-top-assess {{asshover}}" bind:tap="asshover">
+            评价
+        </view>
+    </view>    
+    <view class="bottom-bottom-parameter {{paradis}}">
+        商品详情
+    </view>
+    <view class="bottom-bottom-assess {{assdis}}">
+        商品评价
+    </view>
+
+</view>
+
+<view class="bottom-cart">
+    <view class="bottom-ico">
+        <navigator url="/pages/cart/cart" open-type = "reLaunch">
+            <image src="../../skin/images/cart.png" class="bottom-top-limg"/>
+            <text class="bottom-order">{{totalnum}}</text>
+        </navigator>
+    </view>
+    <view class="bottom-edit">
+        <view class="bottom-addcart">
+           <view bind:tap="urltocart">
+                加入购物车
+            </view>
+        </view>
+        <view class="bottom-buynow">立刻购买</view>
+    </view>
+</view>
+
+</view>

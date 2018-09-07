@@ -1,9 +1,22 @@
 <view class="contain">
     <view class="newaddrtop"></view>
      <view class="newaddr">
-         <view class="newson newname">姓名 <input type="text" /> </view>
-         <view class="newson newhone">电话 <input type="number" /></view>
-         <view class="newson newaddr">地址 </view>
-         <view class="newdetail"></view>
+         <view class="newson newname"><text>姓名</text>  <input type="text" maxlength="32" name="userName" id="userName" /> </view>
+         <view class="newson newhone"><text>电话</text>  <input type="number" maxlength="11" name="userPhone" id="userPhone" /></view>
+         <view class="newson newaddr">
+            <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+                <view class="picker" wx:if="{{!region[0]}}">
+                {{shqs}}
+                </view>
+                <view class="picker" wx:if="{{region[0]}}">
+                {{region[0]}}，{{region[1]}}，{{region[2]}}
+                </view>
+            </picker>
+         </view>
+         <view class="newdetail">
+             <textarea name="addrdetail" id="addrdetail" auto-height placeholder="请填写详细地址">
+
+             </textarea>
+         </view>
      </view>
 </view>

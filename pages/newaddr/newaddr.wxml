@@ -1,8 +1,8 @@
 <view class="contain">
     <view class="newaddrtop"></view>
      <view class="newaddr">
-         <view class="newson newname"><text>姓名</text>  <input type="text" maxlength="32" name="userName" id="userName" /> </view>
-         <view class="newson newhone"><text>电话</text>  <input type="number" maxlength="11" name="userPhone" id="userPhone" /></view>
+         <view class="newson newname"><text>姓名</text>  <input type="text" bindinput="getName" maxlength="32" name="userName" id="userName" /> </view>
+         <view class="newson newhone"><text>电话</text>  <input type="number" bindinput="getPhone" maxlength="11" name="userPhone" id="userPhone" /></view>
          <view class="newson newaddr">
             <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
                 <view class="picker" wx:if="{{!region[0]}}">
@@ -14,9 +14,12 @@
             </picker>
          </view>
          <view class="newdetail">
-             <textarea name="addrdetail" id="addrdetail" auto-height placeholder="请填写详细地址">
+             <textarea name="addrdetail" bindinput="getDetail" id="addrdetail" auto-height placeholder="请填写详细地址">
 
              </textarea>
          </view>
+     </view>
+     <view class="addrsub">
+         <view class="bottom-addrnew" bind:tap="addrsub">保存</view> 
      </view>
 </view>

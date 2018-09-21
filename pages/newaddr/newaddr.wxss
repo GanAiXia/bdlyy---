@@ -6,3 +6,4 @@
 .contain .newaddr .newson input{ width: 90%;height: 80%;float: right;margin-top:10rpx;}
 .contain .newaddr .newdetail{width: 94%;margin: 0 auto; min-height: 70rpx}
 .contain .newaddr .newdetail textarea{width: 100%;margin-top: 20rpx;padding-bottom: 20rpx;}
+.contain .bottom-addrnew{width: 94%;background-color: red;text-align: center;font-size: 30rpx;height: 70rpx; margin: 0 auto;border-radius: 15rpx;color: #fff;line-height: 70rpx;margin-top: 50rpx;}

@@ -1,19 +1,28 @@
 <view class="contain">
-    <view class="top-addr" wx:for="{{userRecive}}" wx:for-index="index">
+    <view class="top-addr" wx:for="{{userRecive}}" wx:for-index="index" wx:if="{{userRecive[index].username.length > 0}}">
         <view class="top-top"> 
-            <view class="top-topl">{{item.userName}}</view>
-            <view class="top-topr">{{item.userPhone}}</view>
+            <view class="top-topl">{{item.username}}</view>
+            <view class="top-topr">{{item.telphone}}</view>
         </view>
-        <view class="top-center">{{item.userAddr}}</view>
+        <view class="top-center">{{item.addres}}</view>
         <view class="top-bottom">
-            <view class="top-bottoma">
-                <icon type="success" color="{{item.userDef}}" size="16" />
-                默认地址</view> 
+            <view wx:if="{{item.userDef == 'true'}}" class="top-bottoma" bind:tap="userDefchange" data-index="{{index}}">
+                <icon type="success" size="16" />
+                默认地址
+            </view>
+            <view wx:else="{{item.userDef == 'false'}}" class="top-bottoma" bind:tap="userDefchange" data-index="{{index}}">
+                <icon type="clear" size="16" />
+                默认地址
+            </view>
             <view class="top-bottome">
                 <view class="top-bottomedit"><image src="/skin/images/edit.png" />编辑</view>
                 <view class="top-bottomedel"><image src="/skin/images/delete.png" />删除</view>
             </view> 
         </view>
+    </view>
+
+    <view class="center-adde">
+
     </view>
 
     <view class="bottom-addr">

@@ -18,6 +18,14 @@
 
              </textarea>
          </view>
+         <view wx:if="{{userDef == true}}" class="userDef" bind:tap="userDefchage">
+                <icon  type="success" size="16" />
+                默认地址
+         </view> 
+         <view wx:else="{{userDef == false}}" class="userDef" bind:tap="userDefchage">
+                <icon  type="clear" size="16" />
+                默认地址
+         </view> 
      </view>
      <view class="addrsub">
          <view class="bottom-addrnew" bind:tap="addrsub">保存</view> 

@@ -11,7 +11,8 @@ Page({
     iv: '',
     nickName:'',
     avatarUrl: '',
-    gender: ''
+    gender: '',
+    userDef: false
   },
   onLoad: function() {
     // 查看是否授权
@@ -88,6 +89,12 @@ Page({
     })
     
   },
+  userDefchage:function () {
+    var udc = !this.data.userDef
+    this.setData({
+      userDef: udc
+    })
+  },
   addrsub: function () {
     let that = this  
     let region = that.data.region
@@ -95,7 +102,6 @@ Page({
     let userPhone = that.data.userPhone
     let addrDetail = that.data.addrDetail
     let userAddrDetail = that.data.userAddrDetail
-
     if (userName.length == 0) {
         wx.showToast({
             title: '用户名不能为空啊',
@@ -156,7 +162,8 @@ Page({
         userAddrDetail: that.data.userAddrDetail,
         nickName:that.data.nickName,
         avatarUrl: that.data.avatarUrl,
-        gender: that.data.gender
+        gender: that.data.gender,
+        userDef: that.data.userDef
        },
        method: 'POST',
        header: {

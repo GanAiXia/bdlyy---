@@ -1,0 +1,33 @@
+<view class="contain">
+    <view class="newaddrtop"></view>
+     <view class="newaddr">
+         <view class="newson newname"><text>姓名:</text>  <input type="text" bindinput="getName" maxlength="32" value="{{userName}}" name="userName" id="userName" /> </view>
+         <view class="newson newhone"><text>电话:</text>  <input type="number" bindinput="getPhone" maxlength="11" value="{{userPhone}}" name="userPhone" id="userPhone" /></view>
+         <view class="newson newaddr">
+            <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+                <view class="picker" wx:if="{{!region[0]}}">
+                {{shqs}}
+                </view>
+                <view class="picker" wx:if="{{region[0]}}">
+                {{region[0]}}，{{region[1]}}，{{region[2]}}
+                </view>
+            </picker>
+         </view>
+         <view class="newdetail">
+             <textarea name="addrdetail" value="{{addrDetail}}" bindinput="getDetail" id="addrdetail" auto-height placeholder="请填写详细地址">
+
+             </textarea>
+         </view>
+         <view wx:if="{{userDef == 'true'}}" class="userDef" bind:tap="userDefchage">
+                <icon  type="success" size="16" />
+                默认地址
+         </view> 
+         <view wx:else="{{userDef == 'false'}}" class="userDef" bind:tap="userDefchage">
+                <icon  type="clear" size="16" />
+                默认地址
+         </view> 
+     </view>
+     <view class="addrsub">
+         <view class="bottom-addrnew" bind:tap="addrsub">保存</view> 
+     </view>
+</view>

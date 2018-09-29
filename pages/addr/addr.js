@@ -68,8 +68,50 @@ Page({
               'content-type': 'application/json'
             },
             success: function (res) {
-                console.log(res.data.res)
+                // console.log(res.data.res)
             }
+        })
+    },
+    delAddr: function (res) {
+        var that = this
+        var delIndex = res.currentTarget.dataset.index
+        var openId = wx.getStorageSync('openId')
+       
+        wx.request({
+            url: 'https://weixin.ganxia.xyz/admin/member/delAddr',
+            data: {
+                openId: openId,
+                delIndex: delIndex
+            },
+            method: 'POST',
+            header: {
+              'content-type': 'application/json'
+            },
+            success: function (res) {
+                if (res.data.res == 1) {
+                    wx.showToast({
+                      title: '删除成功',
+                      icon: 'success',
+                      duration: 2000,
+                      success: function () {
+                       setTimeout(() => {
+                        wx.redirectTo({
+                            url: '/pages/addr/addr'
+                        })
+                       }, 1000)
+                      }
+                    })
+                  }
+                // console.log(res)
+            }
+        })
+        // console.log(res.currentTarget.dataset.index)
+    },
+    editAddr: function (res) {
+        var that = this
+        var editIndex = res.currentTarget.dataset.index
+        wx.redirectTo({
+            url: '/pages/editaddr/editaddr?editIndex=' + editIndex
         })
     }
 })

@@ -15,8 +15,8 @@
                 默认地址
             </view>
             <view class="top-bottome">
-                <view class="top-bottomedit"><image src="/skin/images/edit.png" />编辑</view>
-                <view class="top-bottomedel"><image src="/skin/images/delete.png" />删除</view>
+                <view class="top-bottomedit" bind:tap="editAddr" data-index="{{index}}"><image src="/skin/images/edit.png" />编辑</view>
+                <view class="top-bottomedel" bind:tap="delAddr" data-index="{{index}}"><image src="/skin/images/delete.png" />删除</view>
             </view> 
         </view>
     </view>

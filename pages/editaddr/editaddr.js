@@ -12,14 +12,20 @@ Page({
     nickName:'',
     avatarUrl: '',
     gender: '',
-    userDef: false,
+    userDef: 'true',
     sheng: '',
     shi: '',
-    qu: ''
+    qu: '',
+    editIndex: ''
   },
-  onLoad: function() {
+  onLoad: function(e) {
     // 查看是否授权
     var that = this
+    // console.log(e.editIndex)
+    var editIndex = e.editIndex
+    that.setData({
+      'editIndex': editIndex
+    })
     var openId = (wx.getStorageSync('openId'))
     if (openId) {
       wx.getUserInfo({
@@ -39,6 +45,42 @@ Page({
           console.log("获取用户信息完成！")
         }
       })
+
+      wx.request({
+        //后台接口地址
+         url: 'https://weixin.ganxia.xyz/admin/member/editAddr',
+         data: {
+          openId: openId,
+          editIndex: editIndex
+         },
+         method: 'POST',
+         header: {
+           'content-type': 'application/json'
+         },
+         success: function (res) {
+           console.log(res.data)
+           var userNames = res.data.username
+           var telphone = res.data.telphone
+           var userDef = res.data.userDef
+           var addrDetail = res.data.addrdetail
+           var region = []
+           region[0] = res.data.sheng
+           region[1] = res.data.shi
+           region[2] = res.data.qu
+
+
+           that.setData({
+           'userName'  : userNames,
+           'userPhone' : telphone,
+           'userDef'   : userDef,
+           'addrDetail': addrDetail,
+           'region'    : region
+
+           })
+           console.log(that.data.userDef)
+         }
+       })
+
     } else {
 
       wx.showToast({
@@ -55,6 +97,8 @@ Page({
       })
      
     }
+
+
 
   },
   bindRegionChange: function (e) {
@@ -93,7 +137,12 @@ Page({
     
   },
   userDefchage:function () {
-    var udc = !this.data.userDef
+    var udc = this.data.userDef
+    if (udc == "true") {
+      udc = "false"
+    }else{
+      udc = "true"
+    }
     this.setData({
       userDef: udc
     })
@@ -148,7 +197,7 @@ Page({
 
     if (addrDetail.length > 0) {
         userAddrDetail = region[0] + region[1] + region[2] + addrDetail
-
+        console.log(userAddrDetail)
         that.setData({
             'userAddrDetail': userAddrDetail,
             'sheng': region[0],
@@ -160,7 +209,7 @@ Page({
     var openId = wx.getStorageSync('openId')
     wx.request({
       //后台接口地址
-       url: 'https://weixin.ganxia.xyz/admin/member/memberAdd',
+       url: 'https://weixin.ganxia.xyz/admin/member/memberEdit',
        data: {
         openId: openId,
         userName: that.data.userName,
@@ -173,7 +222,8 @@ Page({
         sheng: that.data.sheng,
         shi: that.data.shi,
         qu: that.data.qu,
-        addrDetail: that.data.addrDetail
+        addrDetail: that.data.addrDetail,
+        editIndex: that.data.editIndex
        },
        method: 'POST',
        header: {
@@ -182,17 +232,30 @@ Page({
        success: function (res) {
          if (res.data.res == 1) {
            wx.showToast({
-             title: '添加成功',
+             title: '修改成功',
              icon: 'success',
              duration: 1000,
              success: function () {
               setTimeout(() => {
-                wx.navigateBack({
-                  delta: 1
+                wx.redirectTo({
+                  url: '/pages/addr/addr'
               })
-              }, 1000)
+              }, 1500)
              }
            })
+         }else{
+          wx.showToast({
+            title: '未做修改',
+            icon: 'warn',
+            duration: 1000,
+            success: function () {
+             setTimeout(() => {
+              wx.redirectTo({
+                url: '/pages/addr/addr'
+            })
+             }, 1500)
+            }
+          })
          }
          console.log(res)
        }
